@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flip-card</title>
+
+  <style>
+    .main{
+      position: relative;
+      margin: 100px auto;
+      text-align: center;
+      padding: auto 10px;
+      height: 500px;
+      width: 320px;
+    }
+
+    .card{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: all .5s ease;
+    }
+
+    .card:hover{
+      /* transform: rotateY(-180deg); */
+    }
+
+    .front{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      background-color: rgb(95, 95, 108);
+      color: aliceblue;
+      z-index: 0;
+    }
+
+    .front img{
+      z-index:1;
+      padding: 0px;
+      box-shadow: 2px 2px 2px #333;
+    }
+    .front img:hover{
+      box-shadow: 2px 2px 10px #333;
+    }
+
+    .back{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      background-color: rgb(249, 208, 59);
+      color: rgb(9, 9, 9);
+      transform: rotateY(180deg);
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="card">
+
+      <div class="front">
+        <img src="imgs/floral-background.jpg" alt="" height="100%" width="100%">
+      </div>
+      <div class="back">back</div>
+
+    </div>
+  </div>
+</body>
+</html>

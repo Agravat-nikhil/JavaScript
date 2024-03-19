@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form validation with parameters</title>
+</head>
+<body>
+   Name : <input type="text" id="nameF" onblur="fromValidation(nameF,val)">
+   <span id="val"></span>
+
+   <script>
+    function fromValidation(input_Id,span_Tag){
+
+      // input_Id.style.border="none";
+
+      let regex = /^[a-zA-Z]+$/;
+
+      if(input_Id.value == ""){
+          console.log(span_Tag.innerHTML = "* required")
+          span_Tag.style.color ="red";
+          input_Id.style.border ="none";
+          input_Id.style.borderBottom ="2px solid red";
+      }
+
+      else if(!regex.test(input_Id.value)){
+       
+        console.log(span_Tag.innerHTML = "only letters")
+          span_Tag.style.color ="red";
+          input_Id.style.border ="none";
+          input_Id.style.borderBottom ="2px solid red";
+      }
+
+      else{
+       console.log( span_Tag.innerHTML="");
+       input_Id.style.border ="solid black";
+      }
+    }
+
+    // console.log((input_Id.value,span_Tag))
+
+    
+   </script>
+</body>
+</html>

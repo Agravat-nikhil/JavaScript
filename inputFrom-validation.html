@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Input from validation</title>
+</head>
+<body>
+  Name : <input type="text" id="name">
+  <span id="validate"></span>
+<br>
+<br>
+ <input type="submit" onclick="validation()">
+  
+
+  <script>
+    naMef = document.getElementById('name');
+    spAn = document.getElementById('validate');
+    regexForValidation = /^[a-zA-Z]+$/;
+
+    // for only letter validation in input text type
+    function validation() 
+    {
+
+      if (naMef.value == "") 
+      {
+      naMef.style.border="2px solid red";
+      spAn.innerHTML = "* required!";
+      spAn.style.color = "red";
+      }
+
+     else if (!regexForValidation.test(naMef.value))
+      {
+        spAn.innerHTML = "only letter";
+        spAn.style.color = "red";
+        naMef.style.border="2px solid red";
+      }
+
+       else{
+        spAn.innerHTML = " ";
+        naMef.style.border = "2px solid";
+          }
+    };
+
+
+
+   
+
+    // if(!regexForValidation == naMe.value){
+    //   spAn.innerHTML = "only letter";
+    // }
+
+    // else{
+    //   spAn.innerHTML = " ";
+    // }
+  </script>
+</body>
+</html>

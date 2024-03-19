@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>adding & creating element</title>
+  <style>
+    .bolder{
+      font-size: 24px;
+      font-weight: 600;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <p>content 1</p>
+    <p id="para2">content 2</p>
+    <p>content 3</p>
+
+    <button>get tags</button>
+
+  </div>
+
+  <script>
+   var div = document.querySelector(".main");
+   var h1_tag = document.createElement('h1');
+   var h1_text = document.createTextNode('this is h1 tag added through js append method');
+   var p_tag = document.querySelector('#para2');
+   var demoText = document.createTextNode('demo text above second p');
+   var btn = document.querySelector('button');
+
+  //  h1_tag.append(h1_text);
+  //  div.append(h1_tag);
+  //  console.log(h1_tag);
+
+   div.insertBefore(demoText, p_tag);
+
+  //  demoText.style.color = "blue";
+
+ btn.addEventListener('click', ()=>{
+  h1_tag.append(h1_text);
+   div.append(h1_tag);
+   console.log(h1_tag);
+
+   div.insertBefore(h1_tag, btn);         
+ });
+  </script>
+</body>
+</html>

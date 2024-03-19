@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nested-arrays</title>
+</head>
+<body>
+  <script>
+    items = ["aammzzz", "ajju", "munz", ["pearl", "king", 5]];
+
+    // document.write(items[3][0]+"<br>");
+    
+
+    for(i=0; i<items.length; i++){
+      document.write(items[i] + '<br>')
+
+      for(r=0; r<items[i][r].length; r++){
+        document.write(items[i][r] + "<br>");
+      }
+    }
+
+
+  </script>
+</body>
+</html>

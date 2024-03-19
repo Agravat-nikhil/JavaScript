@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>first-js-file</title>
+  </head>
+  <body>
+    <h1 id="x">hello world!</h1>
+
+    <input type="text" value="type here..." id="inp" />
+
+    <img id="y" src="download.jpg" alt="0img" />
+
+    <script>
+      // document.getElementById("x").innerHTML = "<u><i>Hello universe</i></u>";
+
+      var header_1 = document.getElementById("x");
+
+      var value1 = document.getElementById("inp");
+
+      header_1.style.color = "red";
+      header_1.style.fontSize = "24px";
+
+      value1.style.color = "green";
+
+      alert(header_1.innerText);
+      // prompt((value1.value = "enter your name here"));
+
+      document.getElementById("y").src = "image1.jpg";
+    </script>
+  </body>
+</html>

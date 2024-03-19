@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>add event listener</title>
+</head>
+<body>
+  <p></p>
+  <button class="para">show para</button>
+  <button id="para">hide para</button>
+  <!-- <button class="btn">hide/show</button> -->
+  
+</body>
+<script>
+  var paraText = document.querySelector('p');//tag 
+var showbtn = document.querySelector('.para'); //class
+var hidebtn = document.querySelector('#para'); //id
+
+
+
+// show function
+showbtn.addEventListener('click', ()=> { //anonymous function means a function with no name
+paraText.innerHTML=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo ipsa, ullam velit saepe, aliquid error nostrum molestiae exercitationem a at itaque aliquam! Corrupti eligendi sequi exercitationem voluptates nihil iure eius?"
+});
+
+
+// hide function
+function hidePara(){
+  paraText.innerHTML="";
+}
+hidebtn.addEventListener("click", hidePara)// callback function means a function which pass as a parameter in other function 
+
+
+
+btnhide_show.addEventListener('click', ()=> {
+$("p").toggle('slow');
+})
+
+</script>
+
+</html>

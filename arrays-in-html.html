@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>arrays in html</title>
+</head>
+<body>
+  <h1>heading 1</h1>
+  <h1>heading 2</h1>
+  <h1>heading 3</h1>
+  <h1>heading 4</h1>
+  <h1>heading 5</h1>
+
+  <input type="text" name="name">
+  <br>
+  <input type="text" name="name">
+  <br>
+  <input type="text" name="name">
+  <br>
+  <input type="text" name="name">
+  <br>
+  <input type="text" name="name">
+
+  <script>
+     heading = document.getElementsByTagName('h1');
+     attr_name = document.getElementsByName('name');
+
+    //  heading[4].style.color="red";
+
+     for(i=0; i<heading.length; i++){
+      heading[i].style.color="red";
+      // console.log(attr_name.style.border= '2px solid blue');
+     }
+
+     for(i=0; i<attr_name.length; i++){
+      attr_name[i].style.margin="10px";
+      if(i%2 == 0){
+        attr_name[i].style.border="2px dashed blue";
+        
+      }
+     }
+
+     
+  </script>
+</body>
+</html>

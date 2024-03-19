@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>question-answers task</title>
+    <style>
+      .flex-div {
+        margin: 100px 0;
+        display: flex;
+        /* justify-content: center; */
+        border: 2px solid red;
+        height: 500px;
+        padding: 10px;
+        width: 50%;
+      }
+
+      .one-div {
+        border: 2px solid rgba(122, 20, 218, 0);
+        height: auto;
+        width: 50%;
+      }
+
+      .second-div {
+        border: 3px solid rgb(218, 215, 27);
+        height: auto;
+        width: 50%;
+        background-color: antiquewhite;
+      }
+      .ques-div,
+      .ans-div {
+        border: 2px dashed pink;
+        text-align: center;
+        padding: 12px;
+      }
+      .ques-div {
+        text-transform: capitalize;
+      }
+      .ans-div {
+        display: none;
+        text-align: justify;
+        padding: 12px 20px;
+      }
+      .ans-div::first-line {
+        font-weight: 600;
+        text-align: center;
+        text-transform: capitalize;
+      }
+
+      .fa-question-circle {
+        text-align: right;
+        font-size: larger;
+      }
+      .show {
+        display: block;
+      }
+      /* .second-div{
+  position: relative;
+}
+
+.text{
+position: absolute;
+right: 80%;
+} */
+    </style>
+  </head>
+  <body>
+    <div class="flex-div">
+      <div class="one-div">
+        <div class="parent">
+          <div class="ques-div">
+            this is question
+            <i class="fa fa-question-circle" aria-hidden="true"></i>
+          </div>
+
+          <div class="ans-div">
+            this is ans: <br />
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.Maxime
+            aliquid ratione nesciunt quo reprehenderit incidunt maiores.
+          </div>
+        </div>
+        <div class="parent">
+          <div class="ques-div">
+            this is question
+            <i class="fa fa-question-circle" aria-hidden="true"></i>
+          </div>
+
+          <div class="ans-div">
+            this is ans: <br />
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.Maxime
+            aliquid ratione nesciunt quo reprehenderit incidunt maiores.
+          </div>
+        </div>
+        <div class="parent">
+          <div class="ques-div">
+            this is question
+            <i class="fa fa-question-circle" aria-hidden="true"></i>
+          </div>
+
+          <div class="ans-div">
+            this is ans: <br />
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.Maxime
+            aliquid ratione nesciunt quo reprehenderit incidunt maiores.
+          </div>
+        </div>
+      </div>
+
+      <div class="second-div">
+        <div class="text"></div>
+      </div>
+    </div>
+
+    <script>
+      var question1 = document.querySelector(".ques-div");
+      // var question2 = document.querySelector("#ques-div2");
+
+      var answer = document.querySelector(".ans-div");
+      var fontClass = document.querySelector(".fa");
+
+      //////////////////// append getters
+      var text = document.querySelector(".text");
+      var para = document.createElement("p");
+      var p_text = document.createTextNode(
+        "this is p tag added through js append method"
+      );
+
+      let allParents = document.querySelectorAll(".parent");
+
+      // allParents.forEach((parent) => {
+       
+      // });
+
+      question1.addEventListener('click', hideShow);
+
+      //////////////////// function onclick functionality
+      function hideShow() {
+        answer.classList.toggle("show");
+        // text.append(p_text);
+
+        ///////////////////// loop for answers array
+        // for (i = 0; i < answers.length; i++) {
+        //   if ((answers[i].style.display = "none")) {
+        //     answers[i].style.display = "block";
+        //     text.append(p_text);
+        //   } else {
+        //     answers[i].style.display = "none";
+        //   }
+        // }
+      }
+
+      //  questions.addEventListener('click', hideShow);
+    </script>
+  </body>
+</html>

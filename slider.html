@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>slider</title>
+
+  <style>
+    div{
+      position: relative;
+      overflow: hidden;
+      margin: 100px auto;
+      width: 95%;
+    }
+
+    .leftbtn,
+    .rightbtn{
+      height: 50px;
+      width: 50px;
+      font-size: 24px;
+    }
+    .leftbtn{
+      position: absolute;
+      top: 50%;
+      left: 20px;
+
+      transform: translate(-50%,0)
+    }
+
+    .rightbtn{
+      position: absolute;
+      top: 50%;
+      right: -30px;
+
+      transform: translate(-50%,0);
+    }
+
+    .images{
+      animation: imageScale 2s infinite linear;
+     
+    }
+
+    @keyframes imageScale{
+      to{transform: scale(1.3);}
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="text">Slider with html css and js basic</h1>
+  <div>
+    <img onclick="slider()" src="imgs/floral-background.jpg" alt="" id="image" class="images" height="400px" width="100%" >
+
+    <button onclick="slider()" class="leftbtn"><</button>
+    <button onclick="slider()" class="rightbtn">></button>
+
+  </div>
+ 
+
+  <script>
+images = document.getElementById("image");
+
+
+function slider()
+{
+  if(images.src.match("floral-background.jpg"))
+{
+  images.src = "imgs/cosmos.png";
+}
+
+ else{
+   if(images.src.match("cosmos.png")) 
+    {
+     images.src = "imgs/triangles.png";
+    }
+
+     else if (images.src.match("triangles.png")) 
+      {
+      images.src = "imgs/lines.jpg";
+      }
+
+      else{
+        images.src="imgs/floral-background.jpg";
+      }     
+ }
+
+ setTimeout("slider()", 3000);
+
+}
+// get value
+ let textInH1 = document.getElementById("text");
+
+//  set value 
+ 
+textInH1.style.textAlign= "center";
+textInH1.style.textTransform="capitalize";
+
+var cssStyles = textInH1.style ;
+
+cssStyles.color="purple";
+cssStyles.background.linearGradient="to right, red, yellow";
+
+
+
+
+// if(images.src.match("floral-background.jpg"))
+// {
+//   images.src = "imgs/cosmos.png";
+
+//   if(images.src.match("cosmos.png")) 
+//     {
+//      images.src = "imgs/triangles.png";
+//     }
+
+//        if (images.src.match("triangles.png")) 
+//       {
+//       images.src = "imgs/floral-background.jpg";
+//       }
+// }
+
+
+
+    // console.log(images.src.match("triangles.png"));
+  </script>
+</body>
+
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object</title>
+  </head>
+  <body>
+    <script>
+      obj = {
+        'age': 21,
+        'name': "john doe",
+        'course': "front-end"
+      };
+
+      // print individual value of object
+      // document.write(obj.age);
+      // document.write("<br>" + obj["course"] + "<br>")
+
+      // through loops
+      // for(o in obj){
+      //   document.write(obj[o] + "<br>") // we get key/index of oblect in for in loop at first
+      // }
+
+      for (i of obj) {
+        document.write(i + "<br>");
+      }
+    </script>
+  </body>
+</html>
